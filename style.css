@@ -1,0 +1,93 @@
+body{
+    overflow-x: hidden;
+    background: linear-gradient(to right, #243B55, #141E30); 
+}
+
+@font-face {
+    font-family: digital;
+    src: url(digital.ttf);
+}
+
+p{
+    font-size: 500%;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight:bold;
+    text-align: center;
+    text-shadow: 5px 5px 5px black;
+}
+
+.main{
+    
+    background-image: linear-gradient(to bottom, #434343 0%, black 100%);    
+    width: 28%;
+    padding: 1.85%;
+    margin-left: 36%;
+    border-radius: 10%;
+    box-shadow: 2px 2px 50px rgb(29, 29, 29);
+}
+#mo{
+    margin: 2% auto -2% 40%;
+    border-radius: 25px;
+    width: 20%;
+    font-weight: bold;
+    background-color: rgb(102, 102, 102);
+
+}
+
+
+#disp{
+    background-color: rgb(85, 84, 84);
+    color: white;
+    text-align: right;
+    font-family: digital;
+    width: 97.6%;
+    height: 70px;
+    font-size: 60px;
+    margin: 0.25%;
+    border-radius:10px ;
+}
+#disp:focus{
+    outline: none;
+}
+
+#one{
+    margin-top: 8%;
+}
+
+#two{
+    display: none;
+    margin-top: 8%;
+}
+
+.bt{
+    width: 22.6%;
+    margin: 0.75%;
+    font-size: 350%;
+    text-align: center;
+    border-radius: 10px;
+    filter: brightness(95%);
+}
+
+.bt:hover ,#mo:hover{
+    filter: brightness(150%);
+}
+
+.num{
+    background-color: rgb(204, 204, 204);
+}
+
+.opr{
+    background-color: orange;
+}
+
+.eql{
+    background-color:dodgerblue;
+    color: white;
+}
+
+.clr{
+    background-color: rgb(252, 66, 66);
+    color: white;
+}
+

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1 , user-scalable=yes">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+        <link rel="shortcut icon" type="image/x-icon" href="ic.png"  />
+        <title>Calculator</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+
+    <div class="cntainer">
+        <div class="calc">
+            <p id="demo">Calculator<p>
+
+            <div class="main" >
+
+                    <input name="display" id="disp" value=""><br>
+                    <form id = "calform" name="cal">
+                    <div id="one">
+                        <input type="button" class ="num bt" value="7" onclick="document.getElementById('disp').value+='7'">
+                        <input type="button" class ="num bt" value="8" onclick="document.getElementById('disp').value+='8'">
+                        <input type="button" class ="num bt" value="9" onclick="document.getElementById('disp').value+='9'">
+                        <input type="button" class ="opr bt" value="+" onclick="document.getElementById('disp').value+='+'"><br>
+                        <input type="button" class ="num bt" value="4" onclick="document.getElementById('disp').value+='4'">
+                        <input type="button" class ="num bt" value="5" onclick="document.getElementById('disp').value+='5'">
+                        <input type="button" class ="num bt" value="6" onclick="document.getElementById('disp').value+='6'">
+                        <input type="button" class ="opr bt" value="x" onclick="document.getElementById('disp').value+='*'"><br>
+                        <input type="button" class ="num bt" value="1" onclick="document.getElementById('disp').value+='1'">
+                        <input type="button" class ="num bt" value="2" onclick="document.getElementById('disp').value+='2'">
+                        <input type="button" class ="num bt" value="3" onclick="document.getElementById('disp').value+='3'">
+                        <input type="button" class ="opr bt" value="-" onclick="document.getElementById('disp').value+='-'"><br>
+                        <input type="button" class ="num bt" value="0" onclick="document.getElementById('disp').value+='0'">
+                        <input type="button" class ="clr bt" value="C" onclick="document.getElementById('disp').value=''">
+                        <input type="button" id="eql" class ="eql bt" value="=" onclick="document.getElementById('disp').value=eval(document.getElementById('disp').value)">
+                        <input type="button" class ="opr bt" value="&#247;" onclick="document.getElementById('disp').value+='/'">
+                        <button id="mo" type="button" onclick="mor()">More</button>
+                    </div>
+
+                    <div id="two">
+                        <input type="button" class ="num bt" value="7" onclick="document.getElementById('disp').value+='7'">
+                        <input type="button" class ="num bt" value="8" onclick="document.getElementById('disp').value+='8'">
+                        <input type="button" class ="num bt" value="9" onclick="document.getElementById('disp').value+='9'">
+                        <input type="button" class ="opr bt" value="(" onclick="document.getElementById('disp').value+='('"><br>
+                        <input type="button" class ="num bt" value="4" onclick="document.getElementById('disp').value+='4'">
+                        <input type="button" class ="num bt" value="5" onclick="document.getElementById('disp').value+='5'">
+                        <input type="button" class ="num bt" value="6" onclick="document.getElementById('disp').value+='6'">
+                        <input type="button" class ="opr bt" value=")" onclick="document.getElementById('disp').value+=')'"><br>
+                        <input type="button" class ="num bt" value="1" onclick="document.getElementById('disp').value+='1'">
+                        <input type="button" class ="num bt" value="2" onclick="document.getElementById('disp').value+='2'">
+                        <input type="button" class ="num bt" value="3" onclick="document.getElementById('disp').value+='3'">
+                        <input type="button" class ="opr bt" value="&#8901;" onclick="document.getElementById('disp').value+='.'"><br>
+                        <input type="button" class ="num bt" value="0" onclick="document.getElementById('disp').value+='0'">
+                        <input type="button" class ="clr bt" value="C" onclick="document.getElementById('disp').value=''">
+                        <input type="button" id="eql" class ="eql bt" value="=" onclick="document.getElementById('disp').value=eval(document.getElementById('disp').value)">
+                        <input type="button" class ="opr bt" value="&#960;" onclick="document.getElementById('disp').value+='3.14'">
+                        <button id="mo" type="button" onclick="les()">Less</button>
+                        </div>
+
+                </form>
+                
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        
+        function mor() {
+            document.getElementById('one').style.display='none';
+            document.getElementById('two').style.display='block';
+        }
+
+        function les() {
+            document.getElementById('two').style.display='none';
+            document.getElementById('one').style.display='block';
+        }
+        
+        var input = document.getElementById('disp');
+        document.getElementById('disp').addEventListener("keyup", function(event) {
+            if (event.keyCode === 13) {
+                event.preventDefault();
+                document.getElementById("eql").click();
+            }
+        });
+    </script>
+
+</html>
